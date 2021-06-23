@@ -29,9 +29,13 @@
   # Zsh >= 5.1 is required.
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
-function prompt_foo() {
+function prompt_osenv() {
 
-	p10k segment -f black -b white -t "->"
+	if [ -z "$OS_ENV" ]; then
+          p10k segment -f black -b white -t "->"
+	else
+	  p10k segment -f black -b white -t "$OS_ENV"
+	fi
 
 }
 
@@ -39,7 +43,7 @@ function prompt_foo() {
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    foo
+    osenv
 #    os_icon                 # os identifier
     dir                     # current directory
     vcs                     # git status
@@ -63,9 +67,9 @@ function prompt_foo() {
     anaconda                # conda environment (https://conda.io/)
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     goenv                   # go environment (https://github.com/syndbg/goenv)
-    nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
-    nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
-    nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
+    # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
+    # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
+    # nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
     # node_version          # node.js version
     # go_version            # go version (https://golang.org)
     # rust_version          # rustc version (https://www.rust-lang.org)

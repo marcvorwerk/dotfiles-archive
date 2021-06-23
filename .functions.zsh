@@ -61,6 +61,14 @@ pipe2vim() {
 	() { vim $1 </dev/tty >/dev/tty && cat $1 } =(cat)
 }
 
+### OSENV ###
+echo -e "#!/bin/bash\nexport PATH=$PATH" > /tmp/restore_path
+osenv() {
+    osenvfiles="/home/marc/.config/openstack/ENV"
+    export OS_ENV=$(find $osenvfiles \! -executable -type f -printf "%f\n" | sed 's/ /\n/g'| sort | fzf)
+    source $osenvfiles/$OS_ENV
+}
+
 ### TRASH ###
 
 # Idea:

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/home/marc/.local/bin
+export PATH=$PATH:/home/marc/.local/bin:/home/marc/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/marc/.oh-my-zsh"
@@ -74,7 +74,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git 
-	zsh-syntax-highlighting 
+	zsh-syntax-highlighting
+	zsh-autosuggestions
 	thefuck 
 	colorize 
 	command-not-found 
@@ -118,4 +119,7 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 
-source $HOME/.aliases
+source $HOME/.env.zsh
+source $HOME/.aliases.zsh
+source $HOME/.functions.zsh
+source $HOME/.config/cheat/cheat.zsh
