@@ -72,22 +72,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting thefuck colorize command-not-found colored-man-pages)
-alias cat=ccat
-alias less=cless
-RED='\033[0;31m'
-GREEN=''
-YELLOW=''
-BLUE=''
-WHITE=''
-NC='\033[0m' # No Color
+plugins=(
+	git 
+	zsh-syntax-highlighting 
+	thefuck 
+	colorize 
+	command-not-found 
+	colored-man-pages 
+	extract
+)
 
-function
-alias echor=""
-alias echog=""
-alias echoy=""
-alias echob="echo -e"
-alias echow=""
 
 source $ZSH/oh-my-zsh.sh
 
