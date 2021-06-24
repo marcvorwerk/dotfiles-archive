@@ -1,0 +1,12 @@
+*
+!.gitignore
+!.aliases.zsh
+!.config/cheat/cheat.zsh
+!.config/cheat/cheatsheets/personal
+!.config/cheat/cheatsheets/personal/*
+!.config/cheat/conf.yml
+!.env.zsh
+!.functions.zsh
+!.gitconfig
+!.p10k.zsh
+!.zshrc
