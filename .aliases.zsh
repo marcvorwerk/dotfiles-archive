@@ -17,3 +17,5 @@ alias allpkgs="dpkg --get-selections | grep -v deinstall"
 # no_comment
 alias ll="ls -lah"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias history="history -E"

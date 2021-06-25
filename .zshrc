@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	git 
 	zsh-syntax-highlighting
-	zsh-autosuggestions
+#	zsh-autosuggestions
 	thefuck 
 	colorize 
 	command-not-found 
@@ -83,7 +83,7 @@ plugins=(
 	extract
 )
 
-
+DISABLE_MAGIC_FUNCTIONS=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

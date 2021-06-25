@@ -1,10 +1,13 @@
 *
 !.gitignore
 !.aliases.zsh
-!.config/cheat/cheat.zsh
+!.config
+!.config/cheat
+!.config/cheat/cheatsheets
 !.config/cheat/cheatsheets/personal
-!.config/cheat/cheatsheets/personal/*
+!.config/cheat/cheatsheets/personal/**
 !.config/cheat/conf.yml
+!.config/cheat/cheat.zsh
 !.env.zsh
 !.functions.zsh
 !.gitconfig
